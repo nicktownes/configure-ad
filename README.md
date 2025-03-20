@@ -8,7 +8,7 @@ This tutorial outlines the implementation of on-premises Active Directory within
 
 <h2>Video Demonstration</h2>
 
-- ### [YouTube: How to Deploy on-premises Active Directory within Azure Compute](https://www.youtube.com)
+- (Adding video soon)
 
 <h2>Environments and Technologies Used</h2>
 
@@ -24,10 +24,10 @@ This tutorial outlines the implementation of on-premises Active Directory within
 
 <h2>High-Level Deployment and Configuration Steps</h2>
 
-- Step 1
-- Step 2
-- Step 3
-- Step 4
+- Create a Domain Controller and Install Active Directory
+- Create a Domain Admin user within the domain
+- Add a client computer to your domain
+- Setup remote desktop for non-admin users on Client computer
 
 <h2>Deployment and Configuration Steps</h2>
 
