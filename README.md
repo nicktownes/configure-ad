@@ -36,7 +36,9 @@ This tutorial outlines the implementation of on-premises Active Directory within
 </p>
 <p>
   - Created Resource Group in Azure, Virtual Network, Subnet, and DC (Domain Controller).
+  
   - Set up a Client VM and title it Client-1, attaching it to the same region and VN as the Domain Controller.
+  
   - Logged in to Client-1, pinged DC-1 IP to ensure it's being accessed, and opened Powershell and ran ipconfig /all
     DNS should match DC-1's Private IP.
 </p>
@@ -47,9 +49,13 @@ This tutorial outlines the implementation of on-premises Active Directory within
 </p>
 <p>
   - Logged into DC-1 and installed Active Directory Domain Services
+  
   - Promoted to Domain Controller and set up a new forest, titling it mydomain.com
+    
   - Restarted DC and signed back in using mydomain.com\@useraccount
+    
   - In Active Directory Users and Computers, create an Organizational Unit for Employees and Admins
+    
   - Created an admin account, moved it into the Domain Admins Security Group, and logged back into the DC
     as mydomain.com\@adminaccount
 </p>
