@@ -27,7 +27,7 @@ This tutorial outlines the implementation of on-premises Active Directory within
 - Create a Domain Controller and Install Active Directory
 - Create a Domain Admin user within the domain
 - Add a client computer to your domain
-- Setup remote desktop for non-admin users on Client computer
+- Set up remote desktop for non-admin users on Client computer
 
 <h2>Deployment and Configuration Steps</h2>
 
@@ -35,7 +35,10 @@ This tutorial outlines the implementation of on-premises Active Directory within
 <img src="https://i.imgur.com/DJmEXEB.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 </p>
 <p>
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+  - Created Resource Group in Azure, Virtual Network, Subnet, and DC (Domain Controller).
+  - Set up a Client VM and title it Client-1, attaching it to the same region and VN as the Domain Controller.
+  - Logged in to Client-1, pinged DC-1 IP to ensure it's being accessed, and opened Powershell and ran ipconfig /all
+    DNS should match DC-1's Private IP.
 </p>
 <br />
 
@@ -43,7 +46,12 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor i
 <img src="https://i.imgur.com/DJmEXEB.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 </p>
 <p>
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+  - Logged into DC-1 and installed Active Directory Domain Services
+  - Promoted to Domain Controller and set up a new forest, titling it mydomain.com
+  - Restarted DC and signed back in using mydomain.com\@useraccount
+  - In Active Directory Users and Computers, create an Organizational Unit for Employees and Admins
+  - Created an admin account, moved it into the Domain Admins Security Group, and logged back into the DC
+    as mydomain.com\@adminaccount
 </p>
 <br />
 
@@ -51,6 +59,6 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor i
 <img src="https://i.imgur.com/DJmEXEB.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 </p>
 <p>
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+  
 </p>
 <br />
